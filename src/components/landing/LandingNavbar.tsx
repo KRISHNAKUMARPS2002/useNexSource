@@ -1,0 +1,75 @@
+// src/components/landing/LandingNavbar.tsx
+"use client";
+
+import Link from "next/link";
+import { useState } from "react";
+import { Menu, X } from "lucide-react"; // icons
+import Image from "next/image";
+import { navLinks } from "@/constants/navLinks";
+
+export default function LandingNavbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-[1400px] z-50 rounded-2xl bg-white/20 backdrop-blur-sm shadow-3xl border border-white/20 transition-all">
+      <div className="px-4 md:px-10 py-4 flex items-center justify-between">
+        {/* Website name */}
+        <Link
+          href="/"
+          className="flex items-center gap-2 text-xl font-bold text-white"
+        >
+          useNexSource
+        </Link>
+
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-6 items-center">
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-white text-sm font-medium transition"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href="#contact"
+            className="bg-primary text-white py-2 px-6 rounded-xl text-sm font-medium hover:bg-primary-hover transition"
+          >
+            Book a Demo
+          </Link>
+        </nav>
+
+        {/* Mobile Menu Toggle */}
+        <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Nav */}
+      {isOpen && (
+        <div className="md:hidden bg-white/90 rounded-b-2xl shadow-inner border-t border-gray-200">
+          <div className="px-4 py-4 flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 text-base font-medium hover:text-black"
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              href="#contact"
+              className="bg-primary text-white text-center px-6 py-3 rounded-md font-medium hover:bg-primary-hover"
+              onClick={() => setIsOpen(false)}
+            >
+              Book a Demo
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
+  );
+}
