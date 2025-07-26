@@ -2,10 +2,11 @@
 
 :root {
   --background: #f5f5f5;
-  --foreground: #171717;
+  --foreground: rgba(17, 24, 39, 0.7);
   --primary: #854dff;
   --primary-hover: #6f3dff;
   color-scheme: light dark;
+  font-family: var(--font-inter), sans-serif;
 }
 
 @theme inline {
@@ -18,7 +19,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: rgba(237, 237, 237, 0.8);
     --primary: #a57bff;
     color-scheme: dark light;
   }

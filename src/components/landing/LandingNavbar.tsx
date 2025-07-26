@@ -16,7 +16,7 @@ export default function LandingNavbar() {
         {/* Website name */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold text-white"
+          className="flex items-center gap-2 text-xl font-bold tracking-tight text-black"
         >
           useNexSource
         </Link>
@@ -27,14 +27,14 @@ export default function LandingNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-white text-sm font-medium transition"
+              className="text-sm font-medium text-black hover:text-primary transition"
             >
               {link.label}
             </Link>
           ))}
           <Link
             href="#contact"
-            className="bg-primary text-white py-2 px-6 rounded-xl text-sm font-medium hover:bg-primary-hover transition"
+            className="bg-primary text-white py-2 px-6 rounded-xl text-sm font-semibold hover:bg-primary-hover transition"
           >
             Book a Demo
           </Link>
@@ -55,14 +55,14 @@ export default function LandingNavbar() {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="text-gray-700 text-base font-medium hover:text-black"
+                className="text-sm font-medium text-black hover:text-primary transition"
               >
                 {link.label}
               </Link>
             ))}
             <Link
               href="#contact"
-              className="bg-primary text-white text-center px-6 py-3 rounded-md font-medium hover:bg-primary-hover"
+              className="bg-primary text-white text-center px-6 py-3 rounded-md font-semibold hover:bg-primary-hover"
               onClick={() => setIsOpen(false)}
             >
               Book a Demo
