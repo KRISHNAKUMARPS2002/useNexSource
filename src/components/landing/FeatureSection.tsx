@@ -66,11 +66,11 @@ const features = [
 
 export default function FeatureSection() {
   return (
-    <section className="py-16 px-4 max-w-7xl mx-auto mt-4 md:mt-12">
+    <section className="py-10 md:py-16 px-4 max-w-7xl mx-auto mt-4 md:mt-12">
       <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 mb-12">
         {/* Left Side (Heading) */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-8">
             Powerful Features <br />
             for <span className="text-primary">Supplier</span> <br />
             Management
@@ -91,7 +91,7 @@ export default function FeatureSection() {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-3 md:mb-10">
         {features.map((feature, idx) => (
           <FeatureCard
             key={idx}
