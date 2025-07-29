@@ -3,15 +3,14 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Menu, X } from "lucide-react"; // icons
-import Image from "next/image";
+import { Menu, X } from "lucide-react";
 import { navLinks } from "@/constants/navLinks";
 
 export default function LandingNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] md:w-[90%] max-w-[1400px] z-50 rounded-2xl bg-white/20 backdrop-blur-sm shadow-3xl border border-white/20 transition-all">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[95%] md:max-w-[90%] xl:max-w-[1400px] z-50 rounded-2xl bg-white/20 backdrop-blur-sm shadow-3xl border border-white/20 transition-all overflow-hidden">
       <div className="px-4 md:px-10 py-4 flex items-center justify-between">
         {/* Website name */}
         <Link

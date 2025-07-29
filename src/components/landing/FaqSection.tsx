@@ -4,67 +4,56 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-// Replace with real Q&A content
 const faqs = [
   {
-    question: "What is Supplyline?",
+    question: "Why do I need a platform like Supplyline?",
     answer:
-      "Supplyline is a centralized SaaS platform for food manufacturers to manage supplier compliance, documentation, and issue tracking.",
+      "Managing supplier paperwork manually can get messy fast. Supplyline helps you stay on top of compliance, avoid expired documents, and save hours of back-and-forth.",
   },
   {
-    question: "How does document expiry notification work?",
+    question: "How do suppliers share their documents with me?",
     answer:
-      "Admins receive email reminders 30 and 7 days before a document expires, with flags for expired/missing documents on the dashboard.",
+      "You just send them a secure upload link — no login or setup needed. They can upload files directly to your system.",
   },
   {
-    question: "Is it multi-tenant?",
+    question: "What happens when a document is about to expire?",
     answer:
-      "Yes. Admins can manage multiple clients and their suppliers separately with role-based access.",
+      "You’ll get automatic reminders, and so will the supplier. No more last-minute chases or surprises.",
   },
   {
-    question: "Where is data hosted?",
+    question: "Can I track which suppliers are fully compliant?",
     answer:
-      "The platform is hosted on an Indian VPS with CDN and SSL from Cloudflare to optimize performance for Canadian users.",
+      "Yes, you get a clean dashboard that shows you which suppliers are all set and which ones need attention.",
   },
   {
-    question: "Can suppliers upload their own documents?",
+    question: "Will my team be able to collaborate on this?",
     answer:
-      "Yes. Suppliers receive secure onboarding links to upload documents directly to their profile.",
+      "Totally. You can invite teammates, assign roles, and work together to keep compliance smooth and centralized.",
   },
   {
-    question: "What is a CAPA?",
+    question: "Do suppliers need to log into anything?",
     answer:
-      "Corrective and Preventive Action (CAPA) helps track resolution of issues with due dates, assignees, and review status.",
+      "Nope. They just click the link, upload the required files, and they’re done. Super simple.",
   },
   {
-    question: "Can I export reviews as PDF?",
+    question: "Can I customize what documents I request from each supplier?",
     answer:
-      "Yes. Performance reviews and CAPA reports can be exported using built-in PDF export.",
+      "Yes, you decide what’s required — from certifications to audits — based on your needs or regulations.",
   },
   {
-    question: "What kind of filters are available?",
+    question: "How secure is the information uploaded to Supplyline?",
     answer:
-      "Admins can filter by document status, risk level, certification tags, and open CAPAs.",
+      "Very secure. All data is encrypted, access is controlled, and we follow best practices for data protection.",
   },
   {
-    question: "Is there a dashboard overview?",
+    question: "What industries is Supplyline built for?",
     answer:
-      "Yes. The admin dashboard provides high-level insights across all clients and suppliers.",
+      "Primarily food manufacturing and distribution — but any business needing supplier documentation can use it.",
   },
   {
-    question: "Does it support role-based permissions?",
+    question: "Is there support if I get stuck?",
     answer:
-      "Yes. Only Admins can manage everything. Clients have limited read/edit access.",
-  },
-  {
-    question: "What tech stack is it built on?",
-    answer:
-      "It uses Next.js, PostgreSQL, Prisma, Tailwind CSS, NextAuth.js, and more.",
-  },
-  {
-    question: "Can I self-host this platform?",
-    answer:
-      "Currently it's SaaS-only, but self-hosting may be offered in the future.",
+      "Absolutely. Our team is just a chat or email away to help you onboard or troubleshoot anything.",
   },
 ];
 
@@ -76,7 +65,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
+    <section className="max-w-6xl mx-auto px-4 py-12 md:py-24">
       <h2 className="text-3xl text-center md:text-4xl font-bold mb-10 text-gray-900">
         Have Questions?
       </h2>
@@ -86,10 +75,10 @@ export default function FAQSection() {
           return (
             <div
               key={index}
-              className="border border-gray-200 rounded-xl bg-white shadow-sm"
+              className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm"
             >
               <button
-                className="w-full px-6 py-6 flex justify-between items-center text-left group"
+                className="w-full px-3 md:px-6 py-6 flex justify-between items-center text-left group hover:bg-gray-50 transition-colors cursor-pointer"
                 onClick={() => toggle(index)}
               >
                 <span className="text-base font-medium text-gray-900">
@@ -110,7 +99,7 @@ export default function FAQSection() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 py-4 text-sm text-gray-600">
+                    <div className="px-6 py-6 text-sm text-gray-700 bg-gray-50 border-t border-gray-200">
                       {answer}
                     </div>
                   </motion.div>
