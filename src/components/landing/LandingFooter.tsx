@@ -7,7 +7,7 @@ export default function LandingFooter() {
       <div className="max-w-7xl mx-auto px-6 py-20 flex flex-col gap-10">
         {/* Heading */}
         <h2 className="text-white text-3xl sm:text-4xl md:text-7xl font-medium leading-tight">
-          See what's possible with <br /> us
+          See what&apos;s possible with <br /> us
         </h2>
 
         {/* Contact Boxes */}
