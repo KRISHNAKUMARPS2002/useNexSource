@@ -79,12 +79,13 @@ export default function FeatureSection() {
         {/* Right Side (Paragraph) */}
         <div className="w-full md:w-1/2">
           <p className="text-foreground">
-            Whether you're a compliance consultant managing multiple clients or
-            a manufacturer overseeing your own supply chain, our platform adapts
-            to your workflow. Easily onboard suppliers, track documentation, and
-            stay ahead of audits — all from one centralized system. Designed for
-            both consultants and manufacturers, it brings clarity, control, and
-            confidence to every part of the supplier compliance process.
+            Whether you&apos;re a compliance consultant managing multiple
+            clients or a manufacturer overseeing your own supply chain, our
+            platform adapts to your workflow. Easily onboard suppliers, track
+            documentation, and stay ahead of audits — all from one centralized
+            system. Designed for both consultants and manufacturers, it brings
+            clarity, control, and confidence to every part of the supplier
+            compliance process.
           </p>
         </div>
       </div>
