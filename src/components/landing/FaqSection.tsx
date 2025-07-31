@@ -6,11 +6,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Why do I need a platform like Supplyline?",
-    answer:
-      "Managing supplier paperwork manually can get messy fast. Supplyline helps you stay on top of compliance, avoid expired documents, and save hours of back-and-forth.",
-  },
-  {
     question: "How do suppliers share their documents with me?",
     answer:
       "You just send them a secure upload link — no login or setup needed. They can upload files directly to your system.",
@@ -66,7 +61,7 @@ export default function FAQSection() {
 
   return (
     <section className="max-w-6xl mx-auto px-4 py-12 md:py-24">
-      <h2 className="text-3xl text-center md:text-4xl font-bold mb-10 text-gray-900">
+      <h2 className="text-3xl text-center md:text-4xl font-bold mb-10 text-dark">
         Have Questions?
       </h2>
       <div className="space-y-4">
@@ -81,7 +76,7 @@ export default function FAQSection() {
                 className="w-full px-3 md:px-6 py-6 flex justify-between items-center text-left group hover:bg-gray-50 transition-colors cursor-pointer"
                 onClick={() => toggle(index)}
               >
-                <span className="text-base font-medium text-gray-900">
+                <span className="text-base font-medium text-dark">
                   {question}
                 </span>
                 <ChevronDown
@@ -99,7 +94,7 @@ export default function FAQSection() {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   >
-                    <div className="px-6 py-6 text-sm text-gray-700 bg-gray-50 border-t border-gray-200">
+                    <div className="px-6 py-6 text-sm text-foreground bg-gray-50 border-t border-gray-200">
                       {answer}
                     </div>
                   </motion.div>

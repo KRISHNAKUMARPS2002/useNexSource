@@ -24,8 +24,10 @@ export default function FeatureCard({
       <div className="text-primary mb-4">
         <Icon size={32} />
       </div>
-      <h3 className="text-lg font-semibold tracking-tight mb-2">{title}</h3>
-      <p className="text-sm text-gray-700 leading-relaxed">{description}</p>
+      <h3 className="text-lg font-semibold text-dark tracking-tight mb-2">
+        {title}
+      </h3>
+      <p className="text-sm text-foreground leading-relaxed">{description}</p>
     </motion.div>
   );
 }

@@ -25,10 +25,10 @@ export default function ZigZagSectionCard({
       >
         {/* Text Content */}
         <div className="w-full md:w-1/2">
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-gray-900 mb-4 leading-tight">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-dark mb-4 leading-tight">
             {title}
           </h3>
-          <p className="text-gray-700 text-base md:text-lg mb-4">
+          <p className="text-foreground text-base md:text-lg mb-4">
             {description}
           </p>
           <ul className="space-y-2 md:space-y-4">
@@ -37,7 +37,7 @@ export default function ZigZagSectionCard({
                 key={index}
                 className="flex items-start gap-3 text-gray-800 text-sm md:text-base"
               >
-                <CircleCheckBig className="text-primary min-w-[20px]" />
+                <CircleCheckBig className="text-secondary min-w-[20px]" />
                 <span>{point}</span>
               </li>
             ))}

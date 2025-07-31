@@ -70,23 +70,21 @@ export default function FeatureSection() {
       <div className="flex flex-col md:flex-row items-start gap-6 md:gap-10 mb-12">
         {/* Left Side (Heading) */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 tracking-tight leading-tight mb-8">
-            Powerful Features <br />
-            for <span className="text-primary">Supplier</span> <br />
-            Management
+          <h2 className="text-3xl md:text-5xl font-bold text-dark tracking-tight leading-tight mb-8">
+            Built for <span className="text-info">Consultants</span> <br />
+            and <span className="text-info">Manufacturers</span>
           </h2>
         </div>
 
         {/* Right Side (Paragraph) */}
         <div className="w-full md:w-1/2">
-          <p className="text-gray-600">
-            Streamline compliance workflows, monitor supplier performance in
-            real time, and eliminate the chaos of manual document collection.
-            Our platform simplifies onboarding, centralizes data, and ensures
-            your team stays ahead of audits and regulatory deadlines with
-            confidence. Designed for both consultants and suppliers, it brings
-            clarity, accountability, and efficiency to every step of your
-            compliance process.
+          <p className="text-foreground">
+            Whether you're a compliance consultant managing multiple clients or
+            a manufacturer overseeing your own supply chain, our platform adapts
+            to your workflow. Easily onboard suppliers, track documentation, and
+            stay ahead of audits — all from one centralized system. Designed for
+            both consultants and manufacturers, it brings clarity, control, and
+            confidence to every part of the supplier compliance process.
           </p>
         </div>
       </div>

@@ -10,12 +10,12 @@ export default function LandingNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[95%] md:max-w-[90%] xl:max-w-[1400px] z-50 rounded-2xl bg-white backdrop-blur-sm shadow-3xl border border-white/20 transition-all overflow-hidden">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[95%] md:max-w-[90%] xl:max-w-[1400px] z-50 rounded-2xl bg-light shadow-3xl border border-white/20 transition-all overflow-hidden">
       <div className="px-4 md:px-10 py-4 flex items-center justify-between">
         {/* Website name */}
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold tracking-tight text-black"
+          className="flex items-center gap-2 text-xl font-bold tracking-tight text-dark"
         >
           useNexSource
         </Link>
@@ -26,7 +26,7 @@ export default function LandingNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-black hover:text-primary-hover transition"
+              className="text-sm font-medium text-dark hover:text-primary-hover transition"
             >
               {link.label}
             </Link>
@@ -47,18 +47,29 @@ export default function LandingNavbar() {
 
       {/* Mobile Nav */}
       {isOpen && (
-        <div className="md:hidden bg-white/90 rounded-b-2xl shadow-inner border-t border-gray-200">
+        <div className="md:hidden bg-light rounded-b-2xl shadow-inner border-t border-gray-300">
           <div className="px-4 py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsOpen(false)}
-                className="text-sm font-medium text-black hover:text-primary transition"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.href.startsWith("http") ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-dark hover:text-primary-hover transition"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm font-medium text-dark hover:text-primary-hover transition"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
             <Link
               href="#contact"
               className="bg-primary text-white text-center px-6 py-3 rounded-md font-semibold hover:bg-primary-hover"

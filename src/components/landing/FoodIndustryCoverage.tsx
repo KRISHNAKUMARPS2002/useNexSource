@@ -41,7 +41,7 @@ export default function FoodIndustryCoverage() {
           {/* Header */}
           <div className="flex flex-col md:flex-row items-start gap-8 md:gap-16 mb-16">
             <div className="w-full md:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight tracking-tight">
+              <h2 className="text-4xl md:text-5xl font-bold text-dark leading-tight tracking-tight">
                 Built for Every Corner of the
                 <span className="text-primary block mt-1 font-mono">
                   Food Ecosystem
@@ -49,7 +49,7 @@ export default function FoodIndustryCoverage() {
               </h2>
             </div>
             <div className="w-full md:w-1/2 pt-2 md:pt-4">
-              <p className="text-gray-600 text-base md:text-lg">
+              <p className="text-foreground text-base md:text-lg">
                 From farm to fork, our platform supports all sectors of the food
                 supply chain with precision and scalability. No matter your
                 industry segment, we have the tools and expertise to meet your
@@ -65,7 +65,7 @@ export default function FoodIndustryCoverage() {
                 key={index}
                 className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all group"
               >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <div className="w-10 h-10 rounded-lg bg-primary/10 text-info flex items-center justify-center">
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-medium text-gray-800 group-hover:text-primary transition-colors">
