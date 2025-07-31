@@ -10,7 +10,7 @@ export default function LandingNavbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[95%] md:max-w-[90%] xl:max-w-[1400px] z-50 rounded-2xl bg-white/20 backdrop-blur-sm shadow-3xl border border-white/20 transition-all overflow-hidden">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 w-full max-w-[95%] md:max-w-[90%] xl:max-w-[1400px] z-50 rounded-2xl bg-white backdrop-blur-sm shadow-3xl border border-white/20 transition-all overflow-hidden">
       <div className="px-4 md:px-10 py-4 flex items-center justify-between">
         {/* Website name */}
         <Link
@@ -26,7 +26,7 @@ export default function LandingNavbar() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-black hover:text-primary transition"
+              className="text-sm font-medium text-black hover:text-primary-hover transition"
             >
               {link.label}
             </Link>
